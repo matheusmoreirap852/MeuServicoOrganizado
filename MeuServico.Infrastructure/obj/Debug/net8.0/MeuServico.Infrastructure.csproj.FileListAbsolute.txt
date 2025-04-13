@@ -15,3 +15,4 @@
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/ref/MeuServico.Infrastructure.dll
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Infrastructure.runtimeconfig.json
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.genruntimeconfig.cache
+/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.sourcelink.json

@@ -9,3 +9,4 @@
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/refint/MeuServico.Domain.dll
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.pdb
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/ref/MeuServico.Domain.dll
+/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.sourcelink.json

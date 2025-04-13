@@ -13,3 +13,4 @@
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/refint/MeuServico.Application.dll
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.pdb
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/ref/MeuServico.Application.dll
+/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.sourcelink.json
