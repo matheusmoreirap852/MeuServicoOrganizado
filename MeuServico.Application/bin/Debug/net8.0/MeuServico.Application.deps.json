@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MeuServico.Application/1.0.0": {
+        "dependencies": {
+          "MeuServico.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MeuServico.Application.dll": {}
+        }
+      },
+      "MeuServico.Domain/1.0.0": {
+        "runtime": {
+          "MeuServico.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MeuServico.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MeuServico.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "jzSNoe5C8t4hRSkreSPGuO7WY37vq7+C5UWoZqtS/K0=",
+  "Source": "MeuServico.API",
+  "BasePath": "_content/MeuServico.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
