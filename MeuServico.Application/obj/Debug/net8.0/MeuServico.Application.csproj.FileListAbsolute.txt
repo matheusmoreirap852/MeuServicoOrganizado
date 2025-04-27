@@ -14,3 +14,19 @@
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.pdb
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/ref/MeuServico.Application.dll
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.sourcelink.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/bin/Debug/net8.0/MeuServico.Application.deps.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/bin/Debug/net8.0/MeuServico.Application.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/bin/Debug/net8.0/MeuServico.Application.pdb
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/bin/Debug/net8.0/MeuServico.Domain.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/bin/Debug/net8.0/MeuServico.Domain.pdb
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.csproj.AssemblyReference.cache
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.AssemblyInfoInputs.cache
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.AssemblyInfo.cs
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.csproj.CoreCompileInputs.cache
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.sourcelink.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServi.A4112AF1.Up2Date
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/refint/MeuServico.Application.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/MeuServico.Application.pdb
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/Debug/net8.0/ref/MeuServico.Application.dll

@@ -5456,11 +5456,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
+      "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
       "projectName": "MeuServico.API",
-      "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
+      "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
       "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.API/obj/",
+      "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -5475,11 +5475,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
-              "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj"
+            "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
+              "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj"
             },
-            "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
-              "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj"
+            "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
+              "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj"
             }
           }
         }

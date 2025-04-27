@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+      "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
       "projectName": "MeuServico.Domain",
-      "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+      "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
       "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/",
+      "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/user/.nuget/NuGet/NuGet.Config"

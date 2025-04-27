@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {}
+    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {}
   },
   "projects": {
-    "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
+    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
+        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
         "projectName": "MeuServico.Application",
-        "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
+        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Application/obj/",
+        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
-                "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
+              "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
+                "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
+    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
         "projectName": "MeuServico.Domain",
-        "projectPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/",
+        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"

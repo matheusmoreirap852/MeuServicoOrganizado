@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nDIdk+01+98=",
+  "dgSpecHash": "7KLrHtVqTOI=",
   "success": true,
-  "projectFilePath": "/Users/user/Downloads/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
+  "projectFilePath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/user/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/user/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

@@ -10,3 +10,15 @@
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.pdb
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/ref/MeuServico.Domain.dll
 /Users/user/Downloads/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.sourcelink.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/bin/Debug/net8.0/MeuServico.Domain.deps.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/bin/Debug/net8.0/MeuServico.Domain.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/bin/Debug/net8.0/MeuServico.Domain.pdb
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.AssemblyInfoInputs.cache
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.AssemblyInfo.cs
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.csproj.CoreCompileInputs.cache
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.sourcelink.json
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/refint/MeuServico.Domain.dll
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/MeuServico.Domain.pdb
+/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/Debug/net8.0/ref/MeuServico.Domain.dll
