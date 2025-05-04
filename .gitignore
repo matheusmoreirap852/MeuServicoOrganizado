@@ -1,29 +1,94 @@
-# Arquivos do Visual Studio
+# .NET
+# Ignorar arquivos de compilação
+bin/
+obj/
+
+# Ignorar arquivos DLL gerados
+*.dll
+*.exe
+*.pdb
+*.db
+*.mdb
+
+# Ignorar arquivos temporários de depuração e símbolos
+*.vspscc
+*.vssscc
 .vs/
 .vscode/
+
+# Arquivos do Visual Studio
+.vs/
 .idea/
+# Arquivos de projeto do Rider
+.idea/
+
+# Arquivos do Windows
+Thumbs.db
+ehthumbs.db
+
+# Arquivos de configuração do Visual Studio
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.sln*
+*.csproj.user
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.nupkg
 
-# Build e binários do .NET
-bin/
-obj/
+# Arquivos de Log
+*.log
 
-# Dependências do Node.js
-node_modules/
-
-# Arquivos gerados pela publicação
+# Arquivos gerados por publicação
 publish/
 
-# Arquivos do Docker
+# Arquivos temporários de build e cache
+.tmp/
+*.bak
+*.swp
+*.swo
+
+# Diretórios do Node.js (se aplicável)
+node_modules/
+
+# Dependências do NuGet
+# Arquivos de pacotes e dependências
+packages/
+*.nupkg
+
+# Arquivos de ambiente de contêiner Docker
 Dockerfile
 docker-compose.yml
 
 # Arquivos temporários do sistema
-Thumbs.db
-ehthumbs.db
+*.tmp
+*.bak
+*.swp
 
-# Arquivos de log
-*.log
+# Diretórios de IDEs e editores de código
+.vscode/
+.idea/
+
+# Configurações do editor de código
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos do ASP.NET Core
+wwwroot/
+
+# Arquivos do ASP.NET (se aplicável)
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# Arquivos gerados no processo de build do .NET
+*.dotCover
+*.coverage
+*.coveragexml
+
+# Arquivos de logs de testes
+TestResults/
+
+# Arquivos de cache de dependências (NuGet e outros)
+*.vsix
