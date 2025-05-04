@@ -1,0 +1,29 @@
+# Arquivos do Visual Studio
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build e binários do .NET
+bin/
+obj/
+
+# Dependências do Node.js
+node_modules/
+
+# Arquivos gerados pela publicação
+publish/
+
+# Arquivos do Docker
+Dockerfile
+docker-compose.yml
+
+# Arquivos temporários do sistema
+Thumbs.db
+ehthumbs.db
+
+# Arquivos de log
+*.log
