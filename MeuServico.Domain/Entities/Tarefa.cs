@@ -1,21 +1,14 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace MeuServico.Domain.Entities
+public class Tarefa
 {
-    public class Tarefa
-    {
-        [Key]
-        public int Id { get; set; }
-        
-        public string Titulo { get; set; }
-        
-        public string Descricao { get; set; }
-        
-        public string Anotacoes { get; set; }
-        
-        public string? LinhaTempo { get; set; }
-        
-        public DateTime? DataCadastro { get; set; } = DateTime.Now;
-    }
+    [Key] public int Id { get; set; }
+    public string Titulo { get; set; } = string.Empty;
+    public Guid ClienteId { get; set; }
+    public Cliente? Cliente { get; set; }
+    public string Descricao { get; set; } = string.Empty;
+    public string Anotacoes { get; set; } = string.Empty;
+    public string? LinhaTempo { get; set; }
+    public DateTime? DataCadastro { get; set; } = DateTime.Now;
+
+    // **Importante**: campo para o usuário que criou a tarefa
+    public string CreatedByUserId { get; set; } = string.Empty;
 }

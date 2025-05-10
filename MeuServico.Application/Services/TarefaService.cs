@@ -27,11 +27,12 @@ namespace MeuServico.Application.Services
                 Descricao = t.Descricao,
                 Anotacoes = t.Anotacoes,
                 LinhaTempo = t.LinhaTempo,
-                DataCadastro = t.DataCadastro
+                DataCadastro = t.DataCadastro,
+                CreatedByUserId = t.CreatedByUserId
             });
         }
 
-        public async Task<TarefaDTO> ObterPorIdAsync(int id)
+        public async Task<TarefaDTO?> ObterPorIdAsync(int id)
         {
             var tarefa = await _tarefaRepository.ObterPorIdAsync(id);
             if (tarefa == null)
@@ -44,19 +45,21 @@ namespace MeuServico.Application.Services
                 Descricao = tarefa.Descricao,
                 Anotacoes = tarefa.Anotacoes,
                 LinhaTempo = tarefa.LinhaTempo,
-                DataCadastro = tarefa.DataCadastro
+                DataCadastro = tarefa.DataCadastro,
+                CreatedByUserId = tarefa.CreatedByUserId
             };
         }
 
-        public async Task AdicionarAsync(TarefaDTO tarefaDto)
+        public async Task AdicionarAsync(TarefaDTO tarefaDto, string createdByUserId)
         {
             var tarefa = new Tarefa
             {
-                Titulo = tarefaDto.Titulo,
-                Descricao = tarefaDto.Descricao,
-                Anotacoes = tarefaDto.Anotacoes,
-                LinhaTempo = tarefaDto.LinhaTempo,
-                DataCadastro = tarefaDto.DataCadastro
+                Titulo           = tarefaDto.Titulo,
+                Descricao        = tarefaDto.Descricao,
+                Anotacoes        = tarefaDto.Anotacoes,
+                LinhaTempo       = tarefaDto.LinhaTempo,
+                DataCadastro     = tarefaDto.DataCadastro,
+                CreatedByUserId  = createdByUserId
             };
 
             await _tarefaRepository.AdicionarAsync(tarefa);
@@ -66,12 +69,13 @@ namespace MeuServico.Application.Services
         {
             var tarefa = new Tarefa
             {
-                Id = tarefaDto.Id,
-                Titulo = tarefaDto.Titulo,
-                Descricao = tarefaDto.Descricao,
-                Anotacoes = tarefaDto.Anotacoes,
-                LinhaTempo = tarefaDto.LinhaTempo,
-                DataCadastro = tarefaDto.DataCadastro
+                Id               = tarefaDto.Id,
+                Titulo           = tarefaDto.Titulo,
+                Descricao        = tarefaDto.Descricao,
+                Anotacoes        = tarefaDto.Anotacoes,
+                LinhaTempo       = tarefaDto.LinhaTempo,
+                DataCadastro     = tarefaDto.DataCadastro,
+                CreatedByUserId  = tarefaDto.CreatedByUserId
             };
 
             await _tarefaRepository.AtualizarAsync(tarefa);
@@ -83,3 +87,4 @@ namespace MeuServico.Application.Services
         }
     }
 }
+// Compare this snippet from MeuServico.Application/Interfaces/ITarefaService.cs:

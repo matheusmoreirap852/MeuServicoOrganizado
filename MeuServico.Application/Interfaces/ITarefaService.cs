@@ -8,8 +8,8 @@ namespace MeuServico.Application.Interfaces
     {
         Task<IEnumerable<TarefaDTO>> ObterTodosAsync();
         Task<TarefaDTO> ObterPorIdAsync(int id);
-        Task AdicionarAsync(TarefaDTO tarefa);
-        Task AtualizarAsync(TarefaDTO tarefa);
+        Task AdicionarAsync(TarefaDTO tarefa, string createdByUserId);
+        Task AtualizarAsync(TarefaDTO tarefa, string createdByUserId);
         Task RemoverAsync(int id);
     }
 }

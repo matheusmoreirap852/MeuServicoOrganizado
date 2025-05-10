@@ -1,12 +1,13 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System;                                      // para DateTime, se usar em Fluent API
+using Microsoft.AspNetCore.Identity;               // IdentityUser, IdentityRole
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore; // IdentityDbContext<>
 using Microsoft.EntityFrameworkCore;
 using MeuServico.Domain.Entities;
 
 namespace MeuServico.Infrastructure.Data
 {
     // Herdando de IdentityDbContext em vez de DbContext puro
-    public class AppDbContext : IdentityDbContext<IdentityUser>
+    public class AppDbContext : IdentityDbContext<ApplicationUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
@@ -14,7 +15,7 @@ namespace MeuServico.Infrastructure.Data
         }
 
         public DbSet<Cliente> Clientes => Set<Cliente>();
-        public DbSet<Tarefa>  Tarefas  => Set<Tarefa>();
+        public DbSet<Tarefa> Tarefas => Set<Tarefa>();
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -41,14 +42,21 @@ namespace MeuServico.Infrastructure.Data
             builder.Entity<Tarefa>(entity =>
             {
                 entity.HasKey(t => t.Id);
-                entity.Property(t => t.Titulo)
-                      .IsRequired()
-                      .HasMaxLength(200);
-                entity.HasOne(t => t.Cliente)
-                      .WithMany(c => c.Tarefas)
-                      .HasForeignKey(t => t.ClienteId);
-                // outras regras de Tarefa…
+                // ... suas configurações existentes
+
+                // mapeia CreatedByUserId como obrigatório
+                entity.Property(t => t.CreatedByUserId)
+                    .IsRequired();
+
+                // relaciona Tarefa → AspNetUsers (ApplicationUser)
+                entity.HasOne<ApplicationUser>()
+                    .WithMany()             // sem coleção inversa
+                    .HasForeignKey(t => t.CreatedByUserId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
+
+            // Outras entidades e suas configurações…
+
         }
     }
 }
