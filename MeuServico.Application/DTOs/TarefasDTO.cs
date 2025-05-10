@@ -1,15 +1,18 @@
 using System;
-
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 namespace MeuServico.Application.DTOs
 {
     public class TarefaDTO
-    {
-        public int    Id               { get; set; }
-        public string Titulo           { get; set; } = string.Empty;
-        public string Descricao        { get; set; } = string.Empty;
-        public string Anotacoes        { get; set; } = string.Empty;
-        public string? LinhaTempo      { get; set; }
-        public DateTime? DataCadastro  { get; set; }
-        public string CreatedByUserId  { get; set; } = string.Empty;
-    }
+{
+    public int Id              { get; set; }
+    public Guid ClienteId      { get; set; } // ✅ corrigido
+    public string ClienteNome  { get; set; } = "";
+    public string Titulo       { get; set; } = "";
+    public string Descricao    { get; set; } = "";
+    public string Anotacoes    { get; set; } = "";
+    public string LinhaTempo   { get; set; } = "";
+    public DateTime DataCadastro { get; set; }
+}
+
 }

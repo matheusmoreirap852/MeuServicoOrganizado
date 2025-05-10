@@ -1,7 +1,8 @@
 using MeuServico.Application.DTOs;
 using MeuServico.Application.Interfaces;
-using MeuServico.Domain.Entities;
 using MeuServico.Domain.Interfaces;
+using MeuServico.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,81 +11,70 @@ namespace MeuServico.Application.Services
 {
     public class TarefaService : ITarefaService
     {
-        private readonly ITarefaRepository _tarefaRepository;
+        private readonly ITarefaRepository _repo;
 
-        public TarefaService(ITarefaRepository tarefaRepository)
+        public TarefaService(ITarefaRepository repo)
         {
-            _tarefaRepository = tarefaRepository;
+            _repo = repo;
         }
 
-        public async Task<IEnumerable<TarefaDTO>> ObterTodosAsync()
+        public async Task<IEnumerable<TarefaDTO>> ObterTodosAsync(string createdByUserId)
         {
-            var tarefas = await _tarefaRepository.ObterTodosAsync();
-            return tarefas.Select(t => new TarefaDTO
-            {
-                Id = t.Id,
-                Titulo = t.Titulo,
-                Descricao = t.Descricao,
-                Anotacoes = t.Anotacoes,
-                LinhaTempo = t.LinhaTempo,
-                DataCadastro = t.DataCadastro,
-                CreatedByUserId = t.CreatedByUserId
-            });
+            var tarefas = await _repo.ObterTodosAsync(createdByUserId);
+            return tarefas.Select(t => MapToDto(t));
         }
 
-        public async Task<TarefaDTO?> ObterPorIdAsync(int id)
+        public async Task<TarefaDTO?> ObterPorIdAsync(int id, string createdByUserId)
         {
-            var tarefa = await _tarefaRepository.ObterPorIdAsync(id);
-            if (tarefa == null)
-                return null;
-
-            return new TarefaDTO
-            {
-                Id = tarefa.Id,
-                Titulo = tarefa.Titulo,
-                Descricao = tarefa.Descricao,
-                Anotacoes = tarefa.Anotacoes,
-                LinhaTempo = tarefa.LinhaTempo,
-                DataCadastro = tarefa.DataCadastro,
-                CreatedByUserId = tarefa.CreatedByUserId
-            };
+            var tarefa = await _repo.ObterPorIdAsync(id, createdByUserId);
+            return tarefa is null ? null : MapToDto(tarefa);
         }
 
-        public async Task AdicionarAsync(TarefaDTO tarefaDto, string createdByUserId)
+        public async Task<TarefaDTO> AdicionarAsync(CreateTarefaDTO dto, string createdByUserId)
         {
-            var tarefa = new Tarefa
+            var entity = new Tarefa
             {
-                Titulo           = tarefaDto.Titulo,
-                Descricao        = tarefaDto.Descricao,
-                Anotacoes        = tarefaDto.Anotacoes,
-                LinhaTempo       = tarefaDto.LinhaTempo,
-                DataCadastro     = tarefaDto.DataCadastro,
-                CreatedByUserId  = createdByUserId
+                ClienteId       = dto.ClienteId,               // Guid
+                Titulo          = dto.Titulo,
+                Descricao       = dto.Descricao,
+                Anotacoes       = dto.Anotacoes,
+                LinhaTempo      = dto.LinhaTempo,
+                DataCadastro    = DateTime.UtcNow,
+                CreatedByUserId = createdByUserId
             };
 
-            await _tarefaRepository.AdicionarAsync(tarefa);
+            await _repo.AdicionarAsync(entity);
+            return MapToDto(entity);
         }
 
-        public async Task AtualizarAsync(TarefaDTO tarefaDto)
+        public async Task<TarefaDTO?> AtualizarAsync(int id, CreateTarefaDTO dto, string createdByUserId)
         {
-            var tarefa = new Tarefa
-            {
-                Id               = tarefaDto.Id,
-                Titulo           = tarefaDto.Titulo,
-                Descricao        = tarefaDto.Descricao,
-                Anotacoes        = tarefaDto.Anotacoes,
-                LinhaTempo       = tarefaDto.LinhaTempo,
-                DataCadastro     = tarefaDto.DataCadastro,
-                CreatedByUserId  = tarefaDto.CreatedByUserId
-            };
+            var existing = await _repo.ObterPorIdAsync(id, createdByUserId);
+            if (existing is null) return null;
 
-            await _tarefaRepository.AtualizarAsync(tarefa);
+            existing.ClienteId  = dto.ClienteId;
+            existing.Titulo     = dto.Titulo;
+            existing.Descricao  = dto.Descricao;
+            existing.Anotacoes  = dto.Anotacoes;
+            existing.LinhaTempo = dto.LinhaTempo;
+
+            await _repo.AtualizarAsync(existing);
+            return MapToDto(existing);
         }
 
-        public async Task RemoverAsync(int id)
+        public Task RemoverAsync(int id, string createdByUserId)
+            => _repo.RemoverAsync(id, createdByUserId);
+
+        private static TarefaDTO MapToDto(Tarefa t) => new TarefaDTO
         {
-            await _tarefaRepository.RemoverAsync(id);
-        }
+            Id           = t.Id,
+            ClienteId    = t.ClienteId,
+            ClienteNome  = t.Cliente?.Nome ?? string.Empty,
+            Titulo       = t.Titulo,
+            Descricao    = t.Descricao,
+            Anotacoes    = t.Anotacoes,
+            LinhaTempo   = t.LinhaTempo,
+            DataCadastro = t.DataCadastro ?? DateTime.MinValue
+        };
     }
 }
-// Compare this snippet from MeuServico.Application/Interfaces/ITarefaService.cs:

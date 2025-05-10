@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MeuServico.Application.Interfaces;
 using MeuServico.Application.Services;
 using MeuServico.Domain.Interfaces;
@@ -14,7 +15,37 @@ var builder = WebApplication.CreateBuilder(args);
 // --- 1) Controllers & Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    // 1.1) Definição do esquema JWT Bearer
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Insira o token JWT prefixado com \"Bearer \".\n\nExemplo: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9…\"",
+        Name        = "Authorization",
+        In          = ParameterLocation.Header,
+        Type        = SecuritySchemeType.ApiKey,
+        Scheme      = "Bearer"
+    });
+
+    // 1.2) Aplicar o Bearer globalmente a todas as operações
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id   = "Bearer"
+                },
+                Scheme = "Bearer",
+                Name   = "Authorization",
+                In     = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
+});
 
 // --- 2) DbContext + Identity
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -87,13 +118,17 @@ using (var scope = app.Services.CreateScope())
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "MeuServico API v1");
+        // c.RoutePrefix = string.Empty; // para servir o UI na raiz
+    });
 }
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
 
-// **Order matters!**  
+// **Order matters!**
 app.UseAuthentication();
 app.UseAuthorization();
 
