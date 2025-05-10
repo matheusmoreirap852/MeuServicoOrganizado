@@ -7,9 +7,10 @@ namespace MeuServico.Application.Interfaces
     public interface ITarefaService
     {
         Task<IEnumerable<TarefaDTO>> ObterTodosAsync();
-        Task<TarefaDTO> ObterPorIdAsync(int id);
-        Task AdicionarAsync(TarefaDTO tarefa, string createdByUserId);
-        Task AtualizarAsync(TarefaDTO tarefa, string createdByUserId);
+        Task<TarefaDTO?>              ObterPorIdAsync(int id);
+        // Recebe também o UserId de quem criou a tarefa
+        Task AdicionarAsync(TarefaDTO tarefaDto, string createdByUserId);
+        Task AtualizarAsync(TarefaDTO tarefaDto);
         Task RemoverAsync(int id);
     }
 }

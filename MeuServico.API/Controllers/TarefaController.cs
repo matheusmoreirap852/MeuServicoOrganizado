@@ -2,11 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using MeuServico.Application.DTOs;
 using MeuServico.Application.Interfaces;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace MeuServico.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class TarefaController : ControllerBase
     {
         private readonly ITarefaService _tarefaService;
@@ -38,8 +41,12 @@ namespace MeuServico.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] TarefaDTO tarefaDto)
         {
-            await _tarefaService.AdicionarAsync(tarefaDto);
-            // Opcional: retornar o recurso criado com CreatedAtAction
+            // Extrai o UserId do token JWT
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            await _tarefaService.AdicionarAsync(tarefaDto, userId);
             return CreatedAtAction(nameof(GetById), new { id = tarefaDto.Id }, tarefaDto);
         }
 
