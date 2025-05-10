@@ -34,3 +34,21 @@
 /Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.pdb
 /Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.genruntimeconfig.cache
 /Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/ref/MeuServico.Infrastructure.dll
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Infrastructure.deps.json
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Infrastructure.runtimeconfig.json
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Infrastructure.dll
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Infrastructure.pdb
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Domain.dll
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/bin/Debug/net8.0/MeuServico.Domain.pdb
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.csproj.AssemblyReference.cache
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.AssemblyInfoInputs.cache
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.AssemblyInfo.cs
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.sourcelink.json
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServi.04D52552.Up2Date
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.dll
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/refint/MeuServico.Infrastructure.dll
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.pdb
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/MeuServico.Infrastructure.genruntimeconfig.cache
+/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/Debug/net8.0/ref/MeuServico.Infrastructure.dll
