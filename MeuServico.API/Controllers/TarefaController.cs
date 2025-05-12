@@ -1,12 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using MeuServico.Application.DTOs;
 using MeuServico.Application.Interfaces;
-using System.Threading.Tasks;
 
 namespace MeuServico.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class TarefaController : ControllerBase
     {
         private readonly ITarefaService _tarefaService;
@@ -20,7 +23,11 @@ namespace MeuServico.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var tarefas = await _tarefaService.ObterTodosAsync();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            var tarefas = await _tarefaService.ObterTodosAsync(userId);
             return Ok(tarefas);
         }
 
@@ -28,37 +35,57 @@ namespace MeuServico.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var tarefa = await _tarefaService.ObterPorIdAsync(id);
-            if (tarefa == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            var tarefa = await _tarefaService.ObterPorIdAsync(id, userId);
+            if (tarefa == null) 
                 return NotFound();
             return Ok(tarefa);
         }
 
         // POST: api/Tarefa
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] TarefaDTO tarefaDto)
+        public async Task<IActionResult> Create([FromBody] CreateTarefaDTO dto)
         {
-            await _tarefaService.AdicionarAsync(tarefaDto);
-            // Opcional: retornar o recurso criado com CreatedAtAction
-            return CreatedAtAction(nameof(GetById), new { id = tarefaDto.Id }, tarefaDto);
+            if (!ModelState.IsValid) 
+                return BadRequest(ModelState);
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            var created = await _tarefaService.AdicionarAsync(dto, userId);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
         // PUT: api/Tarefa/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] TarefaDTO tarefaDto)
+        public async Task<IActionResult> Update(int id, [FromBody] CreateTarefaDTO dto)
         {
-            if (id != tarefaDto.Id)
-                return BadRequest("O ID da rota não coincide com o ID do objeto.");
+            if (!ModelState.IsValid) 
+                return BadRequest(ModelState);
 
-            await _tarefaService.AtualizarAsync(tarefaDto);
-            return NoContent();
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            var updated = await _tarefaService.AtualizarAsync(id, dto, userId);
+            if (updated == null) 
+                return NotFound();
+            return Ok(updated);
         }
 
         // DELETE: api/Tarefa/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _tarefaService.RemoverAsync(id);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) 
+                return Unauthorized();
+
+            await _tarefaService.RemoverAsync(id, userId);
             return NoContent();
         }
     }

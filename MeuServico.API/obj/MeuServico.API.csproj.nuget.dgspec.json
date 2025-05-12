@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj": {}
+    "/Users/user/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj": {}
   },
   "projects": {
-    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj": {
+    "/Users/user/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
+        "projectUniqueName": "/Users/user/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
         "projectName": "MeuServico.API",
-        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
+        "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.API/MeuServico.API.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.API/obj/",
+        "outputPath": "/Users/user/MeuServicoOrganizado/MeuServico.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
-                "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj"
+              "/Users/user/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
+                "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj"
               },
-              "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
-                "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj"
+              "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
+                "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj"
               }
             }
           }
@@ -51,19 +51,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.*, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.*, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.*, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.*, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -93,14 +97,14 @@
         }
       }
     },
-    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
+    "/Users/user/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
+        "projectUniqueName": "/Users/user/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
         "projectName": "MeuServico.Application",
-        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
+        "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Application/MeuServico.Application.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Application/obj/",
+        "outputPath": "/Users/user/MeuServicoOrganizado/MeuServico.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -115,8 +119,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
-                "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
+              "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
+                "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
               }
             }
           }
@@ -156,14 +160,14 @@
         }
       }
     },
-    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
+    "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+        "projectUniqueName": "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
         "projectName": "MeuServico.Domain",
-        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
+        "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/obj/",
+        "outputPath": "/Users/user/MeuServicoOrganizado/MeuServico.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -215,14 +219,14 @@
         }
       }
     },
-    "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
+    "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
+        "projectUniqueName": "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
         "projectName": "MeuServico.Infrastructure",
-        "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
+        "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/MeuServico.Infrastructure.csproj",
         "packagesPath": "/Users/user/.nuget/packages/",
-        "outputPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Infrastructure/obj/",
+        "outputPath": "/Users/user/MeuServicoOrganizado/MeuServico.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/user/.nuget/NuGet/NuGet.Config"
@@ -237,8 +241,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
-                "projectPath": "/Users/user/Projeto React Native/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
+              "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj": {
+                "projectPath": "/Users/user/MeuServicoOrganizado/MeuServico.Domain/MeuServico.Domain.csproj"
               }
             }
           }
@@ -259,15 +263,19 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.4, )"
+              "version": "[8.0.4, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.4, )"
             }
           },
           "imports": [

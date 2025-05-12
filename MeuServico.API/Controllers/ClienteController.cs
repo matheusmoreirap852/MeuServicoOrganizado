@@ -6,6 +6,7 @@ namespace MeuServico.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    
     public class ClienteController : ControllerBase
     {
         private readonly IClienteService _service;
