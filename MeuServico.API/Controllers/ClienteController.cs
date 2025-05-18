@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using MeuServico.Application.DTOs;
 using MeuServico.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MeuServico.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    
+    [Authorize]
     public class ClienteController : ControllerBase
     {
         private readonly IClienteService _service;
